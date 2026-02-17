@@ -45,6 +45,11 @@ public class DataTypes {
 
           double res3 =(((b + c) / 2 * a + 10) * 3 * b) - 6;
           System.out.println(res3);
+
+          
+          
+
+          
     }
     
 }
