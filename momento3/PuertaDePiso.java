@@ -20,8 +20,6 @@ public class PuertaDePiso extends Puerta {
         return this.bloqueada;
     }
 
-    public void setBloqueada(boolean bloqueada) {
-        this.bloqueada = bloqueada;
-    }
+    
 
 }

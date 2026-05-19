@@ -10,10 +10,7 @@ public class PuertaDeAscensor extends Puerta {
         return this.obstruida;
     }
 
-    public boolean estaObstruida() {
-        return this.obstruida;
-    }
-
+  
     public void setObstruida(boolean obstruida) {
         this.obstruida = obstruida;
     }
