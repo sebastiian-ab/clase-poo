@@ -18,7 +18,7 @@ public class Main {
         sistemaCentral.resetearBotonPiso(3);
 
 
-        System.out.println("\n--- SIMULACIÓN 2: INTENTO CON PUERTA OBSTRUIDA ---");
+        System.out.println("--- SIMULACIÓN 2: INTENTO CON PUERTA OBSTRUIDA ---");
         // Otra persona en el piso 5 oprime el botón
         sistemaCentral.registrarLlamadaPasillo(5, "BAJAR");
 
@@ -29,7 +29,32 @@ public class Main {
         // El sistema escanea los botones de nuevo e intenta mover el ascensor al piso 5
         sistemaCentral.monitorearBotones();
         
-        // --- FIN DE LA SIMULACIÓN ---
+        // --- NUEVO ESCENARIO 3: SE QUITA LA OBSTRUCCIÓN Y EL ASCENSOR ATIENDE EL PISO 5 ---
+        System.out.println("\n--- SIMULACIÓN 3: SE LIBERA LA PUERTA Y SE ATIENDE LA LLAMADA ---");
+        System.out.println("[Sensor] Objeto removido de la puerta de la cabina.");
+        
+        // Desactivamos la obstrucción (volvemos a ponerla en false)
+        sistemaCentral.getAscensor().getPuerta().setObstruida(false);
+
+        // Volvemos a escanear. Como el botón del piso 5 seguía encendido (true),
+        // ahora el sistema sí permitirá mover el ascensor con éxito.
+        sistemaCentral.monitorearBotones();
+
+        // Al llegar, abre las puertas y apaga el led del botón del piso 5
+        sistemaCentral.abrirPuertasLlegada(5);
+        sistemaCentral.resetearBotonPiso(5);
+
+
+        // --- NUEVO ESCENARIO 4: SEGURIDAD Y MANTENIMIENTO ---
+        System.out.println("\n--- SIMULACIÓN 4: PROTOCOLO DE SEGURIDAD EN UN PISO ---");
+        // Simulamos que el técnico o el equipo de seguridad necesita bloquear el piso 1
+        // para que nadie pueda entrar desde el pasillo mientras limpian el hueco del ascensor.
+        sistemaCentral.asegurarPiso(1);
+
+        
+        System.out.println("\n=========================================");
+        System.out.println("       FIN DE TODAS LAS PRUEBAS          ");
+        System.out.println("=========================================");
   
     }
         
