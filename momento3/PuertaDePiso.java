@@ -3,8 +3,8 @@ public class PuertaDePiso extends Puerta {
     private int numeroPiso;
     private boolean bloqueada;
 
-    public PuertaDePiso() {
-        this.numeroPiso = 0;
+    public PuertaDePiso(int numeroPiso) {
+        this.numeroPiso = numeroPiso;
         this.bloqueada = false;
     }
 
@@ -14,10 +14,6 @@ public class PuertaDePiso extends Puerta {
 
     public int getNumeroPiso() {
         return this.numeroPiso;
-    }
-
-    public void setNumeroPiso(int numeroPiso) {
-        this.numeroPiso = numeroPiso;
     }
 
     public boolean estaBloqueada() {

@@ -8,9 +8,8 @@ public class Piso {
     public Piso(int numeroPiso) {
         this.numeroPiso = numeroPiso;
         this.boton = new BotonPiso();
-        this.puerta = new PuertaDePiso();
-        this.puerta.setNumeroPiso(numeroPiso); // recuerda mi rey esto es lanzarle ese número x a la puerta. Es el acto
-                                               // de pasar el paquete. mas no actualizarlo
+        this.puerta = new PuertaDePiso(numeroPiso); 
+
     }
 
     public BotonPiso getBotonPiso() {
