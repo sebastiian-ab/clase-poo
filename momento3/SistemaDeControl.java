@@ -56,10 +56,10 @@ public class SistemaDeControl {
     public void abrirPuertasLlegada(int numeroPiso) {
         System.out.println("El ascensor llegó al piso " + numeroPiso + ". Abriendo puertas...");
         
-        // Abre la puerta de la cabina del ascensor
+       
         this.ascensor.getPuerta().abrir();
         
-        // Abre la puerta del pasillo de ese piso específico
+        
         this.pisos[numeroPiso - 1].getPuertaPiso().abrir();
     }
 

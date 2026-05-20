@@ -4,7 +4,7 @@ public class SimularAscensor {
 
     SistemaDeControl sistemaCentral = new SistemaDeControl(5);
 
-    System.out.println("\n--- SIMULACIÓN 1: LLAMADA NORMAL ---");
+    System.out.println("--- SIMULACIÓN 1: LLAMADA NORMAL ---");
 
     sistemaCentral.registrarLlamadaPasillo(3, "SUBIR");
 
@@ -21,7 +21,7 @@ public class SimularAscensor {
 
     sistemaCentral.monitorearBotones();
 
-    System.out.println("\n--- SIMULACIÓN 3: SE LIBERA LA PUERTA Y SE ATIENDE LA LLAMADA ---");
+    System.out.println("-- SIMULACIÓN 3: SE LIBERA LA PUERTA Y SE ATIENDE LA LLAMADA ---");
     System.out.println("[Sensor] Objeto removido de la puerta de la cabina.");
 
     
@@ -32,7 +32,7 @@ public class SimularAscensor {
     sistemaCentral.abrirPuertasLlegada(5);
     sistemaCentral.resetearBotonPiso(5);
 
-    System.out.println("\n--- SIMULACIÓN 4: PROTOCOLO DE SEGURIDAD EN UN PISO ---");
+    System.out.println("--- SIMULACIÓN 4: PROTOCOLO DE SEGURIDAD EN UN PISO ---");
 
     sistemaCentral.asegurarPiso(1);
 
